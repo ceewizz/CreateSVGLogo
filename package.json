@@ -1,0 +1,19 @@
+{
+  "name": "createsvglogo",
+  "version": "1.0.0",
+  "description": "module10-Challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ceewizz/CreateSVGLogo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ceewizz/CreateSVGLogo/issues"
+  },
+  "homepage": "https://github.com/ceewizz/CreateSVGLogo#readme"
+}
