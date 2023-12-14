@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/ceewizz/CreateSVGLogo/issues"
   },
-  "homepage": "https://github.com/ceewizz/CreateSVGLogo#readme"
+  "homepage": "https://github.com/ceewizz/CreateSVGLogo#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4",
+    "jest": "^29.7.0"
+  },
+  "keywords": []
 }
