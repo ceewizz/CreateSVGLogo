@@ -27,6 +27,8 @@ THEN I am shown a 300x200 pixel image that matches the criteria I entered
 
 Github Repo: https://github.com/ceewizz/CreateSVGLogo
 
+Video Link: https://drive.google.com/file/d/1SuI-MQtLQHSDCfsmW62mWB1RX4ujryyg/view
+
 
 
 
