@@ -1,5 +1,5 @@
 // Importing the figures from figures.js
-const { Rectangle, Square, Triangle } = require("./figures/figures.js");
+const { Circle, Square, Triangle } = require("./figures.js");
 
 // Testing the figure
 describe("Circle test", () => {
@@ -7,7 +7,7 @@ describe("Circle test", () => {
         const figure = new Circle();
         figure.setColor("teal");
         expect(figure.render()).toEqual(
-            `<circle cx="140" cy="105" r="75"  fill="teal" />`
+            '<circle cx="140" cy="105" r="75"  fill="teal"/>'
         );
 
 
@@ -31,9 +31,9 @@ describe("Square test", () => {
 describe("Triangle test", () => {
     test("Triangle with yellow background", () => {
         const figure = new Triangle();
-        figure.setColor("yellow");
+        figure.setColor("#ca00ca");
         expect(figure.render()).toEqual(
-            '<polygon points="160, 20 255, 190 60, 190" fill="yellow" />'
+            '<polygon points="160, 20 255, 190 60, 190" fill ="#ca00ca" />'
 
         );
     });

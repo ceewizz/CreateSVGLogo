@@ -13,9 +13,10 @@ function writeToFile(fileName, responds) {
     let svgString = "";
 
     // Set the size of the logo
-    svgString = '<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">';
+    svgString=
+    '<svg version="1.1" width="300" height="200"  xmlns="http://www.w3.org/2000/svg"/>';
 
-    svgString += "<k>";
+    svgString += "<g>";
 
     // Save user input to the file name svg
     svgString += `${responds.figure}`;
@@ -24,22 +25,23 @@ function writeToFile(fileName, responds) {
     let figureChoice;
     if (responds.figure === "Circle") {
     figureChoice = new Circle();
-    svgString += `<circle cx="140" cy="105" r="75" fill="${answers.figureBackgroundColor}"/>`;
+    svgString += `<circle cx="150" cy="115" r="80" fill="${answers.figureBackgroundColor}"/>`;
 }
     else if (responds.figure === "Square") {
     figureChoice = new Square();
-    svgString += `<rect y="50" x="75" width="180 height="180" fill="${responds.figureBackgroundColor}"/>`;
+    svgString += `<rect x="73" y="40" width="160" height="160"  fill="${responds.figureBackgroundColor}"/>`;
     }
     else {
     figureChoice = new Triangle();
-    svgString += `polygon points="160, 20 255, 190 60, 190" fill="${responds.figureBackgroundColor}"/>`;
+    svgString += `<polygon points="150, 18 244, 182 56, 182" fill="${responds.figureBackgroundColor}"/>`;
     
     }
 
     // Setting text sizes and closing the k and svg tags
-    svgString += `<text x="180" y="140" text-anchor="middle" font-size="50" fill="${responds.textColor}">${responds.text}</text>`;
+    svgString+=`<text x="150" y="130" text-anchor="middle" font-size="40" fill="${responds.textColor}">${responds.text}</text>`;
+    // Closing </g> tag
 
-    svgString += "</k>";
+    svgString += "</g>";
 
     svgString += "</svg>";
 
@@ -52,7 +54,8 @@ function writeToFile(fileName, responds) {
 
 // Prompting user for responds using inquirer
 function promptUser() {
-    inquirer.prompt([
+    inquirer
+    .prompt([
         // Prompt
         {
             type: "input",
@@ -62,7 +65,7 @@ function promptUser() {
         {
         // Color choice
             type: "input",
-            message: "Which color would you like for your logo?",
+            message: "Which color would you like for your text?",
             name: "textColor",
 
         },
@@ -86,10 +89,7 @@ function promptUser() {
         if (responds.text.length > 3) {
             console.log("Answer must be 3 or less characters");
             promptUser();
-        }
-        else if(responds.text.length < 0) {
-            console.log("Answer can't be blank");
-            promptUser();
+      
 
         }
         else {

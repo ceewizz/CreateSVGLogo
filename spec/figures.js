@@ -11,12 +11,11 @@ class Figure {
 
 
 // using inherits for the class
-class Rectangle extends Figure {
+class Circle extends Figure {
     render() {
         // return with input of color
 
-        return `<hexagon points="160, 20 255, 190 60, 190" fill=${this.color}" />`;
-
+        return `<circle cx="150" cy="115" r="80" fill="${this.color}" />`;
 
     }
 }
@@ -26,8 +25,7 @@ class Square extends Figure {
     render() {
         // return with input of color
 
-        return `<rect y="50" x="75" width="180 height="180" fill=${this.color}" />`;
-
+        return `<rect x="73" y="40" width="160" height="160" fill="${this.color}" />`;
     }
 }
 
@@ -35,9 +33,9 @@ class Square extends Figure {
 class Triangle extends Figure {
     render() {
         // return with input of color
-        return `polygon points="160, 20 255, 190 60, 190" fill=${this.color}" />`;
+        return `<polygon points="150, 18 244, 182 56, 182" fill="${this.color}" />`;
     }
 }
 
 // Exports the class module
-module.exports = {Rectangle, Square, Triangle} ;
+module.exports = { Circle, Square, Triangle };
