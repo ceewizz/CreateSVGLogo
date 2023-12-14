@@ -5,7 +5,7 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 
 // Getting the classes from directory
-const { Circle, Square, Triangle } = require(".spec/figures");
+const { Circle, Square, Triangle } = require("./spec/figures");
 
 // Write responds to file
 function writeToFile(fileName, responds) {
@@ -24,7 +24,7 @@ function writeToFile(fileName, responds) {
     let figureChoice;
     if (responds.figure === "Circle") {
     figureChoice = new Circle();
-    svgString += `<circle cx="140" cy="105" r="75" fill="${answers.shapeBackgroundColor}"/>`;
+    svgString += `<circle cx="140" cy="105" r="75" fill="${answers.figureBackgroundColor}"/>`;
 }
     else if (responds.figure === "Square") {
     figureChoice = new Square();
@@ -87,7 +87,7 @@ function promptUser() {
             console.log("Answer must be 3 or less characters");
             promptUser();
         }
-        else if(responds.text.length = 0) {
+        else if(responds.text.length < 0) {
             console.log("Answer can't be blank");
             promptUser();
 
@@ -101,7 +101,3 @@ function promptUser() {
     }
     // Run prompt when app starts 
     promptUser();
-
-
-    ])
-}
